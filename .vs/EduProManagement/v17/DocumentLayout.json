@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\Labs\\EduProManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AF4EB8F7-59FA-48AC-9401-FBF65FCA81FB}|EduProManagement\\EduProManagement.csproj|e:\\labs\\edupromanagement\\edupromanagement\\coursepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4EB8F7-59FA-48AC-9401-FBF65FCA81FB}|EduProManagement\\EduProManagement.csproj|solutionrelative:edupromanagement\\coursepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AF4EB8F7-59FA-48AC-9401-FBF65FCA81FB}|EduProManagement\\EduProManagement.csproj|e:\\labs\\edupromanagement\\edupromanagement\\requestpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF4EB8F7-59FA-48AC-9401-FBF65FCA81FB}|EduProManagement\\EduProManagement.csproj|solutionrelative:edupromanagement\\requestpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AF4EB8F7-59FA-48AC-9401-FBF65FCA81FB}|EduProManagement\\EduProManagement.csproj|e:\\labs\\edupromanagement\\edupromanagement\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF4EB8F7-59FA-48AC-9401-FBF65FCA81FB}|EduProManagement\\EduProManagement.csproj|solutionrelative:edupromanagement\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF4EB8F7-59FA-48AC-9401-FBF65FCA81FB}|EduProManagement\\EduProManagement.csproj|e:\\labs\\edupromanagement\\edupromanagement\\coursepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF4EB8F7-59FA-48AC-9401-FBF65FCA81FB}|EduProManagement\\EduProManagement.csproj|solutionrelative:edupromanagement\\coursepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AF4EB8F7-59FA-48AC-9401-FBF65FCA81FB}|EduProManagement\\EduProManagement.csproj|e:\\labs\\edupromanagement\\edupromanagement\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1108,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -133,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "RequestStatus.cs",
               "DocumentMoniker": "E:\\Labs\\EduProManagement\\EduProManagement\\Models\\RequestStatus.cs",
               "RelativeDocumentMoniker": "EduProManagement\\Models\\RequestStatus.cs",
@@ -141,12 +141,11 @@
               "RelativeToolTip": "EduProManagement\\Models\\RequestStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T17:17:18.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T17:17:18.024Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RequestPage.xaml.cs",
               "DocumentMoniker": "E:\\Labs\\EduProManagement\\EduProManagement\\RequestPage.xaml.cs",
               "RelativeDocumentMoniker": "EduProManagement\\RequestPage.xaml.cs",
@@ -159,15 +158,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RequestPage.xaml",
               "DocumentMoniker": "E:\\Labs\\EduProManagement\\EduProManagement\\RequestPage.xaml",
               "RelativeDocumentMoniker": "EduProManagement\\RequestPage.xaml",
               "ToolTip": "E:\\Labs\\EduProManagement\\EduProManagement\\RequestPage.xaml",
               "RelativeToolTip": "EduProManagement\\RequestPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T17:12:34.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T17:12:34.63Z"
             },
             {
               "$type": "Document",
@@ -183,28 +181,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "CoursePage.xaml.cs",
               "DocumentMoniker": "E:\\Labs\\EduProManagement\\EduProManagement\\CoursePage.xaml.cs",
               "RelativeDocumentMoniker": "EduProManagement\\CoursePage.xaml.cs",
               "ToolTip": "E:\\Labs\\EduProManagement\\EduProManagement\\CoursePage.xaml.cs",
               "RelativeToolTip": "EduProManagement\\CoursePage.xaml.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAiwDkAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-03T16:40:53.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CoursePage.xaml",
               "DocumentMoniker": "E:\\Labs\\EduProManagement\\EduProManagement\\CoursePage.xaml",
               "RelativeDocumentMoniker": "EduProManagement\\CoursePage.xaml",
               "ToolTip": "E:\\Labs\\EduProManagement\\EduProManagement\\CoursePage.xaml",
               "RelativeToolTip": "EduProManagement\\CoursePage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T16:24:02.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T16:24:02.584Z"
             },
             {
               "$type": "Document",
@@ -215,8 +212,7 @@
               "ToolTip": "E:\\Labs\\EduProManagement\\EduProManagement\\App.xaml",
               "RelativeToolTip": "EduProManagement\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T16:18:45.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T16:18:45.775Z"
             },
             {
               "$type": "Document",
@@ -228,8 +224,7 @@
               "RelativeToolTip": "EduProManagement\\LoginWindow.xaml.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAuwCkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T16:14:39.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T16:14:39.724Z"
             },
             {
               "$type": "Document",
@@ -240,8 +235,7 @@
               "ToolTip": "E:\\Labs\\EduProManagement\\EduProManagement\\LoginWindow.xaml",
               "RelativeToolTip": "EduProManagement\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T16:07:59.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T16:07:59.921Z"
             },
             {
               "$type": "Document",
@@ -257,19 +251,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\Labs\\EduProManagement\\EduProManagement\\MainWindow.xaml",
               "RelativeDocumentMoniker": "EduProManagement\\MainWindow.xaml",
               "ToolTip": "E:\\Labs\\EduProManagement\\EduProManagement\\MainWindow.xaml",
               "RelativeToolTip": "EduProManagement\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T16:03:27.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T16:03:27.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "E:\\Labs\\EduProManagement\\EduProManagement\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "EduProManagement\\MainWindow.xaml.cs",
@@ -277,8 +270,7 @@
               "RelativeToolTip": "EduProManagement\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAADwvxQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T16:03:24.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T16:03:24.63Z"
             }
           ]
         },
@@ -300,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Course.cs",
               "DocumentMoniker": "E:\\Labs\\EduProManagement\\EduProManagement\\Models\\Course.cs",
               "RelativeDocumentMoniker": "EduProManagement\\Models\\Course.cs",
@@ -308,8 +300,7 @@
               "RelativeToolTip": "EduProManagement\\Models\\Course.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAACUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T17:10:37.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T17:10:37.481Z"
             },
             {
               "$type": "Document",
@@ -337,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Request.cs",
               "DocumentMoniker": "E:\\Labs\\EduProManagement\\EduProManagement\\Models\\Request.cs",
               "RelativeDocumentMoniker": "EduProManagement\\Models\\Request.cs",
