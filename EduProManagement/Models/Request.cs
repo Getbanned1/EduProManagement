@@ -16,6 +16,8 @@ public partial class Request
 
     public int StatusId { get; set; }
 
+    public int SeatsTaken { get; set; }
+
     public int TotalCost { get; set; }
 
     public string? Comment { get; set; }

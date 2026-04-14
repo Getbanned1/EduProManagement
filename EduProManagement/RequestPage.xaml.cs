@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,12 +33,12 @@ namespace EduProManagement
             _requests = new();
             bool isAdmin = user.Role.Name == "Администратор"; 
             InitializeComponent();
-            if (!isAdmin)
-            {
-                UserBox.IsReadOnly = true;
-                CourseBox.IsReadOnly = true;
-                DateField.IsReadOnly = true;
-            }
+            //if (!isAdmin)
+            //{
+            //    UserBox.IsReadOnly = true;
+            //    CourseBox.IsReadOnly = true;
+            //    DateField.IsReadOnly = true;
+            //}
             List<string> datesort = new List<string>
             {
                 "Все",
@@ -128,6 +129,7 @@ namespace EduProManagement
         {
             try
             {
+
                 _context.SaveChanges();
                 MessageBox.Show($"Изменения сохранены","Успех",MessageBoxButton.OK,MessageBoxImage.Information);
             }
@@ -137,7 +139,7 @@ namespace EduProManagement
             }
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
+        private async void AddButton_Click(object sender, RoutedEventArgs e)
         {
             var newrequest = new Request
             {
@@ -148,8 +150,9 @@ namespace EduProManagement
                 Date = DateOnly.MaxValue,
 
             };
-            _requests.Add(newrequest);
-            _context.Requests.Add(newrequest);
+            await _context.Requests.AddAsync(newrequest);
+            _context.SaveChanges();
+            LoadReuests();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
@@ -158,15 +161,91 @@ namespace EduProManagement
                 return;
 
             var result = MessageBox.Show(
-                $"Удалить заявку на курс{selectedrequest.Course.Name}?",
+                $"Удалить заявку на курс {selectedrequest.Course.Name}?",
                 "Подтверждение",
                 MessageBoxButton.YesNo);
 
             if (result != MessageBoxResult.Yes)
                 return;
 
-            _requests.Remove(selectedrequest);
+
             _context.Requests.Remove(selectedrequest);
+            _context.SaveChanges();
+            LoadReuests();
         }
+
+        private void RequestsList_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            var editedRequest = e.Row.Item as Request;
+            if (editedRequest == null) return;
+
+            var column = e.Column.Header.ToString();
+
+            if (column == "Статус" && e.EditingElement is ComboBox cb)
+            {
+                var newStatus = cb.SelectedItem as RequestStatus;
+                if (newStatus != null)
+                {
+                    string oldStatusName = editedRequest.Status?.Name;
+
+                    // Проверяем изменение статуса
+                    if (oldStatusName != "Подтверждена" && newStatus.Name == "Подтверждена")
+                    {
+                        // ПОДТВЕРЖДАЕМ заявку - уменьшаем AvaliableSpace
+                        if (!DecreaseAvailableSpace(editedRequest.CourseId))
+                        {
+                            // Если нет мест, отменяем изменение
+                            e.Cancel = true;
+                            return;
+                        }
+                    }
+                    else if (oldStatusName == "Подтверждена" && newStatus.Name != "Подтверждена")
+                    {
+                        // ОТМЕНЯЕМ подтверждение - увеличиваем AvaliableSpace
+                        IncreaseAvailableSpace(editedRequest.CourseId);
+                    }
+
+                    // Обновляем статус
+                    editedRequest.Status = newStatus;
+                    editedRequest.StatusId = newStatus.Id;
+
+                    // Обновляем SeatsTaken для заявок этого курса
+
+
+                    _context.SaveChanges();
+                }
+            }
+        }
+
+        // Уменьшение свободных мест (при подтверждении)
+        private bool DecreaseAvailableSpace(int courseId)
+        {
+            var course = _context.Courses.Find(courseId);
+            if (course == null) return false;
+
+            if (course.AvaliableSpace > 0)
+            {
+                course.AvaliableSpace--;  // Уменьшаем на 1
+                _context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                MessageBox.Show($"Нет свободных мест на курсе \"{course.Name}\"!",
+                    "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+        }
+
+        // Увеличение свободных мест (при отмене подтверждения)
+        private void IncreaseAvailableSpace(int courseId)
+        {
+            var course = _context.Courses.Find(courseId);
+            if (course == null) return;
+
+            course.AvaliableSpace++;  // Увеличиваем на 1
+            _context.SaveChanges();
+        }
+       
     }
 }

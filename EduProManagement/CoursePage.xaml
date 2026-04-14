@@ -18,21 +18,22 @@
             <Label Content="Сортировать по дате"></Label>
             <ComboBox x:Name="DateSortBox" Width="124" SelectionChanged="DateSortBox_SelectionChanged"></ComboBox>
         </StackPanel>
-        <ListBox x:Name="CourseList" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+        <ListBox x:Name="CourseList" Grid.Row="1" Width="840" BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionChanged="CourseList_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="8">
                     <Grid Width="800">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="50"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="200"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="200"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Image Source="{Binding FilePath}"  Grid.Column="0" Stretch="Uniform"></Image>
-                        <StackPanel Grid.Column="1" Margin="20">
+                        <Image Source="{Binding FilePath}" Width="100" Height="100"  Grid.Column="0" Stretch="Uniform"></Image>
+                        <StackPanel Grid.Column="1" Margin="20,0,20,20">
                             <TextBlock Text="{Binding Name}"></TextBlock>
                             <TextBlock Text="{Binding CourseType.Name}"></TextBlock>
                             <TextBlock Text="{Binding Duration, StringFormat='Длительность: {0}'}"></TextBlock>
@@ -42,6 +43,7 @@
                         <TextBlock Grid.Column="2" Background="{Binding LowSeats}" Grid.Row="1" Text="{Binding AvaliableSpace, StringFormat='Кол-во свободных мест: {0}'}"></TextBlock>
 
                     </Grid>
+                    </Border>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

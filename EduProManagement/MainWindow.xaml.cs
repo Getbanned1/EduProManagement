@@ -22,7 +22,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         _user = user;
-        NavigationPanel.Visibility = user.Role.Name == "Администратор" || user.Role.Name == "Менеджер по обучению" ? Visibility.Visible : Visibility.Hidden;
+        //NavigationPanel.Visibility = user.Role.Name == "Администратор" || user.Role.Name == "Менеджер по обучению" ? Visibility.Visible : Visibility.Hidden;
 
         MainFrame.Navigate(new CoursePage(_user));
     }

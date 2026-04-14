@@ -24,10 +24,10 @@ public partial class Course
     public string FileName { get; set; } = null!;
 
     public string FilePath => string.IsNullOrEmpty(FileName) ? "Images/deafult.png" : $"Images/{FileName}";
-    public string LowSeats => AvaliableSpace > TeacherType.Capacity * 0.1 ? "White" : "#FFB6C1";
-
-    public string StartsSoon => StartDate > DateOnly.FromDateTime(DateTime.Today) &&
-    StartDate.DayNumber - DateOnly.FromDateTime(DateTime.Today).DayNumber < 7
+    public string LowSeats => AvaliableSpace > Math.Round(TeacherType.Capacity * 0.1) ? "Transparent" : "#FFB6C1";
+    DateTime date = new DateTime(2026, 7, 20);
+    public string StartsSoon => StartDate > DateOnly.FromDateTime(date) &&
+    StartDate.DayNumber - DateOnly.FromDateTime(date).DayNumber < 7
         ? "Bold"
         : "Normal";
 

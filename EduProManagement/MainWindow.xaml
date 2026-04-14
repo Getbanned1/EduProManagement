@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EduProManagement"
         mc:Ignorable="d"
-        Title="EduPro Менеджмент" Height="450" Width="800">
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Title="EduPro Менеджмент" Height="800" Width="860">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
@@ -17,6 +19,6 @@
             <Button x:Name="RequestPage" Width="100" Content="Заявки" Margin="0,0,10,0" Click="RequestPage_Click"></Button>
 
         </StackPanel>
-        <Frame x:Name="MainFrame" Grid.Row="1" VerticalAlignment="Stretch"></Frame>
+        <Frame x:Name="MainFrame" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left"></Frame>
     </Grid>
 </Window>
